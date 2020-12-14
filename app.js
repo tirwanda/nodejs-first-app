@@ -18,11 +18,11 @@ let request = https.request(options, res => {
     });
 
     res.on('end', () => {
-        console.log(body);
+        //TODO: Parse the data => Convert String to JSON (Javascript Object)
+        let profile = JSON.parse(body);
+        console.log(typeof profile);
     });
 
-    //TODO: Parse the data
-    
 });
 
 request.end();
