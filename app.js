@@ -20,9 +20,8 @@ let request = https.request(options, res => {
     res.on('end', () => {
         //TODO: Parse the data => Convert String to JSON (Javascript Object)
         let profile = JSON.parse(body);
-        console.log(typeof profile);
+        console.log(`${profile.login} owns ${profile.public_repos} repo(s) and has ${profile.followers} followers`);
     });
-
 });
 
 request.end();
