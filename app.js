@@ -1,3 +1,10 @@
 let profile = require('./profile.js');
 
-profile.get('tirwanda');
+// let profiles = ['tirwanda', 'rizafahmi'];
+
+// profiles.map(e => {
+//     return profile.get(e);
+// });
+
+let profiles = process.argv.slice(2);
+profiles.map(profile.get);
